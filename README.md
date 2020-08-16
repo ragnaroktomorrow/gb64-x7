@@ -49,3 +49,4 @@ usb64.exe -rom=C:\cygwin64\usr\local\libdragon\examples\usbio_test\gb64-x7.v64 -
 - Try not to move/jostle the controller while using this. The connections can be finicky and disturbing them can cause issues when reading/writing the cart.
 - If there are connection errors or the Title metadata doesn't look right, first try reinserting the cartridge and performing another read. If that doesn't work try starting over and reconnecting everything with the power off.
 - Please backup and test your saves before writing to the cart. There's no guarantee something won't go wrong and your save will get corrupted. As far as I know, reading should be safe.
+- Unfortunately I don't own any games larger than 2MB, so YMMV when reading ROM data in those cases (I implemented that part blind (: ).
