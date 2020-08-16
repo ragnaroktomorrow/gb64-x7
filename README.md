@@ -23,7 +23,7 @@ It consists of a PC side app (just some serial IO) and an N64 side app. It's bas
 3. Download usb64 from [here](http://krikzz.com/pub/support/everdrive-64/x-series/dev/usb64.exe) and use it to load gb64-x7 onto the everdrive:  
    *(Note the name of the COM port connection used to communicate with the everdrive)*
 ```
-usb64.exe -rom=C:\cygwin64\usr\local\libdragon\examples\usbio_test\gb64-x7.v64 -start
+usb64.exe -rom=gb64-x7.v64 -start
 ```    
 
 4. The gb64-x7 menu should display on the screen and cart data should also appear if a cart is in the Transfer Pak.
