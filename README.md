@@ -2,10 +2,11 @@
 Everdrive-64 x7 Transfer Pak Utilities
 
 This is a pair of tools that allow you to read/write a gb(c) cart via the N64 Transfer Pak, the Everdrive-64 x7 and a serial connection over USB.
-It consists of a PC side app (just some serial IO) and an N64 side app. It's based on [libdragon](https://github.com/DragonMinded/libdragon) and [libgbpak](https://github.com/saturnu/libgbpak).
+It consists of a PC side app (just some serial IO) and an N64 side app. It's based on [libdragon](https://github.com/DragonMinded/libdragon) and [libgbpak](https://github.com/saturnu/libgbpak). 
 
 ## Building
 
+- See the Releases for prebuilt binaries.
 - N64 side
   - Set up a mips64 toolchain for building [libdragon](https://github.com/DragonMinded/libdragon)
   - Add gb64-x7_N64 to the examples directory
