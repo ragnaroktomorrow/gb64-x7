@@ -35,7 +35,7 @@ usb64.exe -rom=gb64-x7.v64 -start
 
 7. Using the port name noted from your previous use of usb64 and the RAM/ROM size displayed on the screen for this cart, set the application up to receive data:
 ``` 
- gb64x7.exe -port=<COM port observed when running gb64> -file=testsave.srm -recv=8000
+ gb64x7.exe -port=<COM port observed when running usb64> -file=testsave.srm -recv=8000
 ```
 
 8. The application should display that it opened the port and is waiting to receive data
