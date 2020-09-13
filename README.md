@@ -4,17 +4,6 @@ Everdrive-64 x7 Transfer Pak Utilities
 This is a pair of tools that allow you to read/write a gb(c) cart via the N64 Transfer Pak, the Everdrive-64 x7 and a serial connection over USB.
 It consists of a PC side app (just some serial IO) and an N64 side app. It's based on [libdragon](https://github.com/DragonMinded/libdragon) and [libgbpak](https://github.com/saturnu/libgbpak). 
 
-## Building
-
-- See the Releases for prebuilt binaries
-- N64 side
-  - Set up a mips64 toolchain for building [libdragon](https://github.com/DragonMinded/libdragon)
-  - Add gb64-x7_N64 to the examples directory
-  - Add font64.bin, incs.s, and the bios, gfx and sys source and header files to the gb64-x7_N64 directory. These files can be found [at krikzz site](http://krikzz.com/pub/support/everdrive-64/x-series/dev/usbio-sample.zip)  
-  - run make  
-- PC side
-  - Open the solution file in Visual Studio and build the project
-
 ## Usage
 
 1. Set up your N64 with the Everdrive-64 x7, the Transfer Pak and your target cart (Note: you should be able to swap games while using the tool but the Transfer Pak needs to remain connected). 
@@ -51,3 +40,14 @@ usb64.exe -rom=gb64-x7.v64 -start
 - If there are connection errors or the Title metadata doesn't look right, first try reinserting the cartridge and performing another read. If that doesn't work try starting over and reconnecting everything with the power off.
 - Please backup and test your saves before writing to the cart. There's no guarantee something won't go wrong and your save will get corrupted. As far as I know, reading should be safe.
 - Unfortunately I don't own any games larger than 2MB, so YMMV when reading ROM data in those cases (I implemented that part blind (: ).
+
+## Building
+
+- See the [Releases](https://github.com/ragnaroktomorrow/gb64-x7/releases/tag/v1.0.0) for prebuilt binaries
+- N64 side
+  - Set up a mips64 toolchain for building [libdragon](https://github.com/DragonMinded/libdragon)
+  - Add gb64-x7_N64 to the examples directory
+  - Add font64.bin, incs.s, and the bios, gfx and sys source and header files to the gb64-x7_N64 directory. These files can be found [at krikzz site](http://krikzz.com/pub/support/everdrive-64/x-series/dev/usbio-sample.zip)  
+  - run make  
+- PC side
+  - Open the solution file in Visual Studio and build the project
