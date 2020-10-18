@@ -361,8 +361,10 @@ int _set_gbRamBank(int bank){
 	if(gbcart.mapper==GB_NORM){
 		return -1; //no ram
 	}
-	else if( ((gbcart.mapper==GB_MBC1 || gbcart.mapper==GB_MBC3 || gbcart.mapper==GB_HUC1) && bank <=0x03)
-			|| (gbcart.mapper==GB_MBC5 && bank <=0x0F) || (gbcart.mapper==GB_MBC4 && bank <=0x0F)){
+    /* Since MBC30 uses the same header code as MBC3, i'm extending the bank check to 8 for those*/
+	else if( ((gbcart.mapper==GB_MBC1 || gbcart.mapper==GB_HUC1) && bank <=0x03)
+			|| (gbcart.mapper==GB_MBC5 && bank <=0x0F) || (gbcart.mapper==GB_MBC4 && bank <=0x0F)
+            || (gbcart.mapper==GB_MBC3  && bank <= 0x08)){                
 
 		memset(sdata, 0x00, 32);
 		value = write_mempak_address( 0, 0xA00C, sdata ); //prepare for ram enable
